@@ -9,14 +9,14 @@
 
 class ConsoleProgressViewer {
 public:
-  // ŽžŠÔ‘Ò‚¿
+  // wait time
   static void breaktime(double s) {
 	  clock_t t;
 	  t = clock() + s;
 	  while(t > clock());
   }
 
-  // •\Ž¦
+  // show message
   static void progress(std::vector<std::string> message, double delay = 100.0) {
 
     for (int num = 0; num < message.size(); num++) {
