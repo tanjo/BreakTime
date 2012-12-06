@@ -14,6 +14,10 @@ public:
     while(GetTickCount() < time);
 
   }
+  static void wait_second(const unsigned int interval) {
+    DWORD time = GetTickCount() + interval * 1000; // 1000ms
+    while(GetTickCount() < time);
+  }
   // GetTickCount64‚ÆGetTickCount‚Ì¸“x‚Í•Ï‚í‚ç‚È‚¢
   static void wait(const unsigned long long int interval) {
 
@@ -21,11 +25,9 @@ public:
     while(GetTickCount() < time);
 
   }
-  static void wait_second(const unsigned int interval) {
-
-    DWORD time = GetTickCount() + interval * 1000; // 1000ms
-    while(GetTickCount() < time);
-
+  // Sleep(interval)‚ğ—˜—p
+  static void wait_sleep(const unsigned int interval) {
+    Sleep(interval);
   }
 
   /// <summary>interval•b‘Ò‚ÂB</summary>
