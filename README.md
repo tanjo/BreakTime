@@ -3,8 +3,12 @@ BreakTime
 
 疑似スリープ  
 
+    #include "BreakTime/breaktime.h"
+    #include "BreakTime/console_progress_viewer.h"
+
     int main(void) {
-      ConsoleProgressViewer::breaktime(1000);
+      
+      BreakTime::breaktime(1000);
       
       std::vector<std::string> message;
       
@@ -21,3 +25,5 @@ BreakTime
       
       return 0;
     }
+    
+Windows版のbreaktime_win.hが大変便利
